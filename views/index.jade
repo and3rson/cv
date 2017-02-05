@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    title CV
+    link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,700", rel="stylesheet", type="text/css")
+    link(href="https://fonts.googleapis.com/css?family=Lato:300,400,700", rel="stylesheet", type="text/css")
+    style(type="text/css").
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: Roboto;
+            background: #101018;
+            color: #F0F0F8;
+            font-size: 20px;
+            font-weight: 400;
+        }
+        h1, h2, h3 {
+            margin: 0;
+            padding: 0 0 1rem;
+            font-weight: 300;
+            font-family: Lato;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.6rem;
+        }
+        h3 {
+            font-size: 1.4rem;
+        }
+        p {
+            margin: 0;
+            padding: 0 0 1rem;
+            line-height: 125%;
+        }
+        ul {
+            margin: 0;
+            padding: 0 0 1rem;
+        }
+        li {
+            margin-left: 2rem;
+            padding: 0 0 0 0.5rem;
+            list-style-type: '–';
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        .header {
+            background: #000008;
+        }
+        img.avatar {
+            float: left;
+            max-height: 9rem;
+            margin-right: 1rem;
+            border-radius: 50%;
+        }
+        .bio {
+            padding: 1rem 0 0;
+        }
+        ul.menu {
+            list-style: none;
+            padding: 1rem 0 0;
+        }
+        ul.menu li {
+            list-style: none;
+            margin: 0;
+            padding: 0 1rem 0 0;
+            display: inline-block;
+        }
+        a {
+            display: inline-block;
+        }
+        a:link, a:active, a:visited {
+            color: #678;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #ABC;
+            text-decoration: underline;
+        }
+        .company:not(:last-child) {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #678;
+        }
+        .date {
+            font-size: 1rem;
+            line-height: 2rem;
+            padding: 0 0 1rem;
+            float: right;
+            font-weight: 400;
+        }
+        .soft {
+            color: #678;
+        }
+
+        @media print {
+            html, body {
+                background: #FFF;
+                color: #000;
+            }
+            .header {
+                background: #FFF;
+                border-bottom: 1px solid #678;
+            }
+            .menu {
+                display: none;
+            }
+            .company {
+                page-break-inside: avoid !important;
+            }
+        }
+
+body
+    .header
+        .container
+            ul.menu
+                li
+                    a(href="/yaml") Get YAML
+                li
+                    a(href="/pdf") Get PDF
+                li
+                    a(href="/src") Get source
+            .bio
+                img.avatar(src="{{ photo }}")
+                h1 Andrew Dunai
+                for line in bio
+                    p= line
+    .container
+        for company in companies
+            .company
+                h1= company.project
+                    span.soft
+                        = ' @ '
+                        = company.company
+
+                    .date.soft
+                        = company.start
+                        =' '
+                        | &mdash;
+                        =' '
+                        if company.end
+                            = company.end
+                        else
+                            ='present'
+                h3= company.role
+                ul
+                    for technology in company.technologies
+                        li= technology

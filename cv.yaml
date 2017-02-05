@@ -1,0 +1,107 @@
+photo: http://dun.ai/static/images/tf2.jpg
+
+bio:
+  - Born on October 12th, 1991.
+  - Graduated from Lviv Polytechnic National University.
+  - Speaks Ukrainian, English, German and Polish.
+
+companies:
+  - company: NewFire
+    project: Red e App
+    role: Back-End Architect
+    technologies:
+      - Python
+      - NodeJS
+      - AMQP
+      - PostgreSQL
+      - Microservices
+      - Service discovery & configuration
+      - AWS
+    start: !!timestamp 2016-05-01
+    end: null
+
+  - company: N-iX
+    project: N1ght.com, Kultivo.com
+    role: Senior Python Developer
+    technologies:
+      - Python
+      - JavaScript
+      - HTML/CSS
+      - PostgreSQL
+      - AWS
+    start: !!timestamp 2014-11-01
+    end: !!timestamp 2016-01-01
+
+  - company: Svitla Systems
+    project: OspreyData, Inc.
+    role: Senior Python Developer
+    technologies:
+      - Python
+      - MySQL
+    start: !!timestamp 2014-09-01
+    end: !!timestamp 2014-10-01
+
+  - company: N-iX
+    project: qBeats, Inc.
+    role: Senior Full-Stack Developer
+    technologies:
+      - Python
+      - C++
+      - JavaScript
+      - HTML/CSS
+      - Qt
+      - Solr
+      - PostgreSQL
+      - AMQP
+    start: !!timestamp 2013-08-01
+    end: !!timestamp 2014-06-01
+
+  - company: Remit
+    project: Axiomatics
+    role: Senior Webmaster - PHP, administration
+    technologies:
+      - PHP
+      - MySQL
+      - Linux administration
+      - Networking & security
+    start: !!timestamp 2013-02-01
+    end: !!timestamp 2013-08-01
+
+  - company: PrimoCollect
+    project: SIP, networking & web
+    role: Technical Lead
+    technologies:
+      - Python
+      - GTK
+      - Java
+      - C++
+      - HTML/CSS
+      - JS
+      - Qt
+      - PostgreSQL
+      - MS SQL
+      - SIP
+    start: !!timestamp 2011-01-01
+    end: !!timestamp 2013-02-01
+
+  - company: Freelancer
+    project: Various projects
+    role: Full-Stack Developer
+    technologies:
+      - PHP
+      - C#
+      - C++
+      - HTML/CSS
+      - JS
+    start: !!timestamp 2007-04-01
+    end: !!timestamp 2012-01-01
+
+  - company: Airbites
+    project: Internal social network
+    role: PHP Developer
+    technologies:
+      - PHP
+      - HTML/CSS
+      - JS
+    start: !!timestamp 2007-02-01
+    end: !!timestamp 2007-11-01
