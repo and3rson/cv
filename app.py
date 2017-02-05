@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 
 from flask import Flask, render_template, Response
+from werkzeug.contrib.fixers import ProxyFix
 import yaml
 import pdfkit
 
 app = Flask(__name__, template_folder='views')
 app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
+app.wsgi_app = ProxyFix(app.wsgi_app)
 
 
 def get_cv(decode):
