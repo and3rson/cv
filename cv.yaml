@@ -68,7 +68,7 @@ companies:
     end: !!timestamp 2013-08-01
 
   - company: PrimoCollect
-    project: SIP, networking & web
+    project: Web & SIP
     role: Technical Lead
     technologies:
       - Python
